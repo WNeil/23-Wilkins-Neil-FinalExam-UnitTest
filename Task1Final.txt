@@ -1,0 +1,21 @@
+1.
+step 1: write test cases for the implementation in mind
+step 2: make an additional if condition to the for loop stating if the parsed number is below zero, throw an exception
+step 3: add another additional else to the previous if statement stating if the number is above or equal to 1000, skip that iteration
+step 4: test against previously written test cases and adjust code if not passing any.
+
+2.
+
+//negative numbers do 
+@Test
+public class AddTest1() {
+	//im not sure the exact error thrown, assuming IndexOB
+	assertThrows(IndexOutOfBounds.class, StringCalculator.add("-1,5"));
+}
+
+//digits of bigger than or equal to 1000 are ignored by the function
+@Test
+public class AddTest2() {
+	int test = StringCalculator.add("1, 1000");
+	assertEquals(1, test);
+}
